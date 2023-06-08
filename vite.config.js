@@ -5,6 +5,7 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 // Utilities
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
+import fs from 'fs';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -37,5 +38,10 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+    https: {
+      key: fs.readFileSync('./private.key'),
+      cert: fs.readFileSync('./certificate.crt'),
+      passphrase: '1234'
+    },
   },
 })
