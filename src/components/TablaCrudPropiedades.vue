@@ -240,15 +240,15 @@
     closeDelete();
   }
 
-  const editPropiedad = (persona) => {
-    editedIndex.value = propiedades.value.indexOf(persona);
-    editedPropiedad.value = Object.assign({}, persona);
+  const editPropiedad = (propiedad) => {
+    editedIndex.value = propiedades.value.indexOf(propiedad);
+    editedPropiedad.value = Object.assign({}, propiedad);
     dialog.value = true;
   }
 
-  const deletePropiedad = (persona) => {
-    editedIndex.value = propiedades.value.indexOf(persona);
-    editedPropiedad.value = Object.assign({}, persona);
+  const deletePropiedad = (propiedad) => {
+    editedIndex.value = propiedades.value.indexOf(propiedad);
+    editedPropiedad.value = Object.assign({}, propiedad);
     dialogDelete.value = true;
   }
 
